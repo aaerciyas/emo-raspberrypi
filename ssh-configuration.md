@@ -1,3 +1,4 @@
+ssh bağlantısı yapabilmek için Raspberry Pi'yi hdmi bağlantısı ile bir ekrana bağlamanız ve komut yazabilmeniz için usb klavye kullanmanız gerekmektedir. Klavye ve mouse'u bağladıktan sonra raspberry pi'ye güç vererek aşağıdaki işlemleri gerçekleştirebilirsiniz.
 # Klavye Duzeni
 Raspberry Pi'yi ekrana bagladiginizda dikkat edeceginiz ilk sey klavyeni UK klavye olacagi. 
 sudo raspi-config
@@ -6,6 +7,7 @@ secenegine gelip enterlayin. sonrasinda other'dan Turkish'i bulun ve tikladiktan
 Layout deginizde klavyeniz artik Turkce'dir.
 
 # Wifi Ag Ayarlari
+Bu işlem raspberry'yi kendi wifi'nize bağlamanızı sağlar.
 Terminale 
 ```sudo nano /etc/network/interfaces```
 yazin ve dosyayi asagidaki gibi degistirin.
@@ -36,7 +38,7 @@ Raspberryleri guncelleyecek internetimiz ve vaktimiz olmadigindan eger guncellem
 `sudo apt-get update`
 `sudo apt-get upgrade`
 # ONEMLI!!! KURSA GELMEDEN ONCE MUHAKKAK AYARLARI GERI ALIN
-Kursa gelmeden once daha once degistirdigimiz interfaces dosyasini eski halina asagidaki gibi geri getirmelisiniz.
+Kursa gelmeden once daha once degistirdigimiz interfaces dosyasini eski halina asagidaki gibi geri getirmelisiniz. Aksi takdirde EMO'nun wifi adresine bağlanmayacaktır.
 ```sudo nano /etc/network/interfaces```
 ```
 # interfaces(5) file used by ifup(8) and ifdown(8)
